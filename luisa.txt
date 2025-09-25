@@ -1,0 +1,36 @@
+PRACTICA
+
+//Realizar una calculadora que permita manipular tres parametros.
+
+class Calculadora {
+
+    fun calcular(valor1: Double, valor2: Double, operacion: Char): Double {
+        return when (operacion) {
+            '+' -> valor1 + valor2
+            '-' -> valor1 - valor2
+            '*' -> valor1 * valor2
+            '/' -> {
+                if (valor2 == 0.0) {
+                    throw IllegalArgumentException("No se puede dividir por cero.")
+                }
+                valor1 / valor2
+            }
+            else -> throw IllegalArgumentException("Operación inválida: $operacion")
+        }
+    }
+}
+
+fun main() {
+    val valor1 = 30.0
+    val valor2 = 1.0
+    val operacion = '-' 
+
+    val calculadora = Calculadora()
+
+    try {
+        val resultado = calculadora.calcular(valor1, valor2, operacion)
+        println("Resultado: $resultado")
+    } catch (e: Exception) {
+        println("Error: ${e.message}")
+    }
+}
