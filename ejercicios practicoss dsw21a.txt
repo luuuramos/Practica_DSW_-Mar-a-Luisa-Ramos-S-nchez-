@@ -1,0 +1,58 @@
+data class Estudiante(
+val nombre: String,
+val edad: Int,
+val carrera: String,
+val cuentaBanco: String?,
+)
+
+
+fun main() {
+    //codigo aca
+    val student1 = Estudiante("carlos", 20, "Desarrollo de software", "00000")
+    val student2 = Estudiante("carlos", 33, "Desarrollo de software", null)
+    println(student2)
+}
+
+
+/*data class Estudiante(
+val nombre: String,
+val edad: Int,
+val carrera: String,
+val cuentaBanco: String?,
+)
+
+
+fun main() {
+    //codigo aca
+    val student1 = Estudiante("carlos", 20, "Desarrollo de software", "00000")
+    val student2 = Estudiante("carlos", 33, "Desarrollo de software", null)
+    println(student2)
+}*/
+
+producto
+
+
+data class Producto(
+val nombre: String,
+val stock: Int,
+val marca: String,
+val precio: Int,
+val fechaVencimiento: String?,
+)
+
+
+fun main() {
+    //codigo aca
+    val producto1 = Producto ("Camisa", 200, "Adidas", 55, null)
+    val producto2 = Producto("Pc", 106, "hp", 1500, null)
+    val producto3 = Producto("CPU", 16, "hp", 1400, null)
+    
+    val listProducto = listOf(
+         Producto("Camisa", 200, "Adidas", 55, null)
+         Producto("Pc", 106, "hp", 1500, null)
+         Producto("CPU", 16, "hp", 1400, null)
+    )
+    println(producto3)
+    println(listProducto[2])
+    
+}
